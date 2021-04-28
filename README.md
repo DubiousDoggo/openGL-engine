@@ -1,7 +1,7 @@
 # openGL-engine
 A simple object viewer.  
 I made this project mainly to learn openGL, and potentially turn it into a proper game engine at some point.
-If you're interested in learning openGL check out Joey de Vries awesome book at learnopengl.com.
+If you're interested in learning openGL check out Joey de Vries awesome book at [learnopengl.com](https://learnopengl.com).
 
 ## Usage
 On launch it will ask for a model to load. Currently it only supports OBJ files. MTL files do work, however filenames cannot contain spaces. By default it loads the included peach's castle model from mario 64 (nintendo please don't sue me). Use the WASD keys to move and the arrow keys to look around. 
