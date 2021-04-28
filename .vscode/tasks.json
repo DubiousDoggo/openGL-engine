@@ -1,0 +1,49 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    // TODO get makefile working, build time is slooowww
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "dependsOn": [
+                "build shaders"
+            ],
+            "label": "g++.exe build project",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "--pedantic-errors",
+                "-std=c++17",
+                "${workspaceFolder}\\glad.c",
+                "${workspaceFolder}\\main.cc",
+                "-o",
+                "${workspaceFolder}\\main.exe",
+                "-g",
+                "-Iinclude",
+                "-Llib",
+                "-lglfw3",
+                "-lgdi32",
+                "-lopengl32"
+            ],
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": "autoDetect"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "build shaders",
+            "command": "py",
+            "args": [
+                ".\\compile_shaders.py",
+                ".\\shaders\\",
+            ],
+            "group": "build",
+        }
+    ]
+}

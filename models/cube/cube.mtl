@@ -1,0 +1,6 @@
+
+newmtl bup_normal
+map_Kd bup_1.bmp
+
+newmtl bup_frown
+map_Kd bup_2.bmp
